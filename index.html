@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cardi-Oh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar Navigation Menu -->
+  <div id="sidebar" class="sidebar">
+    <button id="closeSidebarBtn" class="close-btn">&times;</button>
+    <h2>Dashboard</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Streak / Progress</a></li>
+      <li><a href="#">Workout History</a></li>
+      <li><a href="#">AI Plan</a></li>
+      <li><a href="#">Edit Profile</a></li>
+      <li><a href="#">Help / FAQs</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Top Bar with Logo and Sidebar Toggle -->
+  <div class="top-bar">
+    <button id="openSidebarBtn" class="menu-icon">&#9776;</button>
+    <span class="logo">Cardi-Oh</span>
+  </div>
+
+  <!-- Landing Section: Welcome Screen -->
+
+    <section id="landingPage" class="landing">
+      <h1 class="main-title">Cardi-Oh 💪</h1>
+      <p class="tagline">Your playful fitness buddy to help you build consistency and strength with a smile!</p>
+
+      <!-- Motivational Quote -->
+      <blockquote class="quote">
+        "No more one-size-fits-all routines. We use your height, weight, and fitness level to build workout plans that actually match your body and goals."
+      </blockquote>
+
+      <!-- Feature Highlights -->
+      <div class="features">
+        <div class="feature-card">🎯 A custom tailored workout plan just for you</div>
+        <div class="feature-card">🐾 Pet Streak to help motivate you</div>
+        <div class="feature-card">📊 Dashboard to help monitor your progress</div>
+        <div class="feature-card">📺 Workout while watching your favourite video</div>
+      </div>
+
+      <!-- Get Started Button -->
+      <div class="landing-button">
+        <button id="getStartedBtn">Get Started</button>
+      </div>
+    </section>
+
+  
+
+  <!-- Form Section: Collects User Info for Custom AI Plan -->
+  <section id="formSection" class="form-section hidden">
+    <h2>Fill out the form to get your custom workout plan</h2>
+    <form id="workoutForm">
+      <div class="form-grid">
+
+        <!-- Input: Name -->
+        <div class="card">
+          <label>👤 What's your name?</label>
+          <input type="text" placeholder="e.g. Shruti" />
+        </div>
+
+        <!-- Input: Height -->
+        <div class="card">
+          <label>📏 What is your height?</label>
+          <input type="text" placeholder="e.g. 5'6" />
+        </div>
+
+        <!-- Input: Weight -->
+        <div class="card">
+          <label>⚖️ What is your weight?</label>
+          <input type="text" placeholder="e.g. 50kg" />
+        </div>
+
+        <!-- Input: Fitness Level (Radio Options) -->
+        <div class="card">
+          <label>💪 What is your fitness level?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="level" /> Beginner</label>
+            <label><input type="radio" name="level" /> Intermediate</label>
+            <label><input type="radio" name="level" /> Advanced</label>
+          </div>
+        </div>
+
+        <!-- Input: Last Workout -->
+        <div class="card">
+          <label>⏱️ When was your last workout?</label>
+          <input type="text" placeholder="e.g. 2 days ago" />
+        </div>
+
+        <!-- Input: Max Pushups -->
+        <div class="card">
+          <label>🧍 Max Push-up count?</label>
+          <input type="number" placeholder="e.g. 10" />
+        </div>
+
+        <!-- Input: Max Squats -->
+        <div class="card">
+          <label>🏋️ Max Squat count?</label>
+          <input type="number" placeholder="e.g. 30" />
+        </div>
+
+        <!-- Input: Fitness Goal -->
+        <div class="card">
+          <label>🎯 What's your fitness goal?</label>
+          <select>
+            <option>Build Strength</option>
+            <option>Lose Weight</option>
+            <option>Gain Muscle</option>
+          </select>
+        </div>
+
+        <!-- Input: Workout Preference -->
+        <div class="card">
+          <label>🏠 Workout preference?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="preference" value="home" /> Home</label>
+            <label><input type="radio" name="preference" value="gym" /> Gym</label>
+          </div>
+        </div>
+
+        <!-- Input: Equipment Available (Only shows for 'Home') -->
+        <div class="card hidden" id="equipmentCard">
+          <label>🧰 Home equipment available:</label>
+          <input type="text" placeholder="e.g. dumbbells, pull-up bar" />
+        </div>
+
+      </div>
+
+      <!-- Submit Button -->
+      <div class="center-button">
+        <button type="submit" class="generate-btn">Generate Plan</button>
+      </div>
+    </form>
+
+    <!-- AI Generated Workout Plan Output -->
+    <section id="generated-plan" style="display: none; padding: 20px;">
+      <h2>Your Personalized Workout Plan</h2>
+      <pre id="plan-output" style="white-space: pre-wrap; background-color: #fff8e7; padding: 1em; border-radius: 10px;"></pre>
+    </section>
+
+  </section>
+
+  <!-- Link JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

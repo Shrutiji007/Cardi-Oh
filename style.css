@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', sans-serif;
+}
+
+body {
+  background: #fff8ef; /* Warm pastel background */
+  color: #333;
+}
+
+/* ==========================
+   Top Bar (Header)
+   ========================== */
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-icon {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #46336f; /* Deep lavender */
+}
+
+/* ==========================
+   Sidebar Navigation
+   ========================== */
+.sidebar {
+  height: 100%;
+  width: 0; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #46336f; /* Dark purple */
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+  color: white;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+/* Sidebar Hover Effect */
+.sidebar ul li a:hover {
+  color: #f9b4ff;
+  margin-left: 5px;
+}
+
+/* Close Button inside Sidebar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ffb6d9;
+}
+
+/* ==========================
+   Landing Page Section
+   ========================== */
+.landing {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.landing h1 {
+  font-size: 36px;
+  color: #46336f;
+  margin-bottom: 10px;
+}
+
+.landing p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+#getStartedBtn {
+  background: #a786ff;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#getStartedBtn:hover {
+  background: #825aff;
+}
+
+/* ==========================
+   Form Section
+   ========================== */
+.form-section {
+  padding: 40px 20px;
+}
+
+.form-section h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #46336f;
+}
+
+/* Form Layout Grid */
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual Card Styling */
+.card {
+  border-radius: 12px;
+  padding: 15px;
+  width: 250px;
+  background: linear-gradient(135deg, #ffe2c4, #f8d0ff); /* Pastel gradient */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #f2cce8;
+}
+
+.card label {
+  font-weight: 600;
+}
+
+/* Input Fields */
+.card input,
+.card select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Radio Button Layout */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Generate Plan Button */
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.generate-btn {
+  background: #a786ff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.generate-btn:hover {
+  background: #825aff;
+}
+
+/* ==========================
+   Utility Classes
+   ========================== */
+.hidden {
+  display: none;
+}
+
+/* ==========================
+   Enhanced Landing Content
+   ========================== */
+.main-title {
+  font-size: 42px;
+  color: #46336f;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #6a4ca4;
+}
+
+.quote {
+  font-size: 16px;
+  font-style: italic;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* Feature Cards Layout */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  background: linear-gradient(to right, #ffe2c4, #f8d0ff);
+  border: 1px solid #f2cce8;
+  border-radius: 15px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  color: #46336f;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Get Started Button Spacing */
+.landing-button {
+  margin-top: 30px;
+}
+

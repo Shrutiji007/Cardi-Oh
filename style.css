@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fceeff, #fdfbff);
+  color: #333;
+}
+
+.landing-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.left-section, .right-section {
+  flex: 1;
+  padding: 2rem;
+}
+
+.logo {
+  width: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h1 span {
+  color: #e04aad;
+}
+.fun {
+  color: #9261f8;
+}
+button {
+  background: #e04aad;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+.small {
+  font-size: 0.8rem;
+  color: gray;
+}
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.feature-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.feature-card span {
+  font-size: 2rem;
+}
+.feature-card.blue { background: #eef5ff; }
+.feature-card.pink { background: #ffeef5; }
+.feature-card.yellow { background: #fff5dd; }
+.feature-card.green { background: #eaffea; }
+
+.form-container {
+  padding: 2rem;
+  max-width: 500px;
+  margin: auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form input, form select {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+.backBtn {
+  background: none;
+  color: #e04aad;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  display: none;
+  flex-direction: column;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.sidebar button {
+  align-self: flex-end;
+  background: none;
+  color: #333;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+.sidebar ul li {
+  margin-bottom: 1rem;
+}
+
+#openSidebarBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #9261f8;
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+
+.dashboard-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.dashboard-sidebar.hidden {
+  transform: translateX(100%);
+}
+
+.dashboard-sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #d838c5;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+  background: #ff0099;
+}
+
+
+.dashboard-card {
+  background: #f9f5ff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(144, 97, 255, 0.1);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  gap: 0.5rem;
+}
+
+.dashboard-card:hover {
+  background-color: #ebe4ff;
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(144, 97, 255, 0.2);
+}

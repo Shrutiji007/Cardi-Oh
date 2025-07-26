@@ -1,4 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cardi-Oh - Your AI Fitness Buddy
+
+Transform your fitness journey with personalized AI workouts and an adorable virtual pet that grows stronger as you do.
+
+## About
+
+Cardi-Oh is a fitness application that combines personalized workout plans with gamification elements. Users can create accounts, complete fitness profiles, and receive tailored workout recommendations.
+
+## Features
+
+- **User Authentication** - Secure login and signup system
+- **Fitness Profile** - Comprehensive onboarding to understand your fitness level and goals
+- **Personalized Dashboard** - Track your progress and view workout recommendations
+- **Settings Management** - Update profile, account settings, and preferences
+- **Responsive Design** - Works seamlessly on desktop and mobile devices
+- **Dark/Light Theme** - Toggle between themes for your preference
 
 ## Getting Started
 
@@ -16,9 +31,47 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Test Credentials
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For development and testing purposes, you can use these test credentials:
+
+**Email:** `test@cardioh.com`  
+**Password:** `test123`
+
+### How to Test:
+1. Navigate to the login page (`/login`)
+2. Enter the test credentials above
+3. Click "Log In" to access the dashboard
+4. Use the settings page to complete your fitness profile
+
+## User Flow
+
+1. **Home Page** (`/`) - Landing page with "Get Started" button
+2. **Signup** (`/signup`) - Quick account creation (name, email, password)
+3. **Dashboard** (`/dashboard`) - Main user interface with profile completion prompt
+4. **Settings** (`/settings`) - Profile management, account settings, and preferences
+5. **Login** (`/login`) - User authentication
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── (auth)/          # Authentication pages
+│   │   ├── login/       # Login page
+│   │   └── signup/      # Signup page
+│   ├── (dashboard)/     # Protected dashboard pages
+│   │   ├── dashboard/   # Main dashboard
+│   │   └── settings/    # Settings page
+│   └── page.tsx         # Home page
+├── components/
+│   ├── sections/        # Page sections
+│   │   ├── hero-section.tsx
+│   │   └── onboarding-form.tsx
+│   └── ui/              # Reusable UI components
+└── lib/
+    └── auth/            # Authentication context
+```
 
 ## Learn More
 

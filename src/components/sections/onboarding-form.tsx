@@ -203,6 +203,14 @@ export function OnboardingForm({ onBack, onSubmit, onLogin, embedded = false }: 
           {embedded ? 'Update Profile' : 'Complete Profile'}
         </Button>
       </div>
+      <div className="pt-2">
+        <Button 
+          type="submit" 
+          className="w-full bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-3 rounded-lg font-semibold hover:from-primary/90 hover:to-primary/70 transition-all duration-300"
+        >
+          {'Generate New Plan'}
+        </Button>
+      </div>
     </form>
   )
 

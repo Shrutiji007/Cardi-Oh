@@ -7,7 +7,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/auth/AuthContext';
 import { OnboardingForm } from '@/components/sections/onboarding-form';
-import { User, Settings, Shield, Bell } from 'lucide-react';
+import { User, Shield, Bell } from 'lucide-react';
 
 interface FormData {
   name: string;

@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useRouter } from "next/navigation"
+import { LoadingScreen } from "@/components/ui/loading-screen"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 interface OnboardingFormProps {
@@ -40,6 +42,9 @@ export function OnboardingForm({ onBack, onSubmit, onLogin, embedded = false }: 
     fitnessGoal: ''
   })
 
+  const [loading, setLoading]  = useState(false)
+  const router = useRouter()
+
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }))
   }
@@ -47,6 +52,16 @@ export function OnboardingForm({ onBack, onSubmit, onLogin, embedded = false }: 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     onSubmit(formData)
+  }
+
+   const handleGeneratePlan = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    // Simulate AI plan generation delay
+    setTimeout(() => {
+      setLoading(false)
+      router.push("/dashboard")
+    }, 2500)
   }
 
   const showEquipment = formData.workoutPreference === 'home'
@@ -205,7 +220,8 @@ export function OnboardingForm({ onBack, onSubmit, onLogin, embedded = false }: 
       </div>
       <div className="pt-2">
         <Button 
-          type="submit" 
+          type="button" 
+          onClick={handleGeneratePlan}
           className="w-full bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-3 rounded-lg font-semibold hover:from-primary/90 hover:to-primary/70 transition-all duration-300"
         >
           {'Generate New Plan'}

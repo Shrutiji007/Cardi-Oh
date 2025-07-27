@@ -89,6 +89,31 @@ export default function DashboardPage() {
 
           {/* Dashboard Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <Card className="mb-6">
+              <CardHeader>
+                <CardTitle className="text-lg">Your AI-Powered Workout Plan</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="font-semibold">Plank</span>
+                    <span>1 min</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-semibold">Rest</span>
+                    <span>30 sec</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-semibold">Repeat</span>
+                    <span>3 sets</span>
+                  </div>
+                  <Button className="mt-4 w-full" onClick={() => router.push("/workout/instructions")}>
+                    Start Workout
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
             {/* Quick Stats */}
             <Card>
               <CardHeader>

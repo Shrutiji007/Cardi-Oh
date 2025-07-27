@@ -143,8 +143,8 @@ export function HeroSection({ onGetStarted }: HeroSectionProps) {
               <Card className="border-l-4 border-l-green-500 bg-green-50 dark:bg-green-950/20 cursor-pointer">
                 <CardContent className="p-6">
                   <span className="text-3xl">🎥</span>
-                  <h4 className="font-semibold text-foreground mt-2">Guided Workouts</h4>
-                  <p className="text-muted-foreground text-sm">Curated YouTube videos by level</p>
+                  <h4 className="font-semibold text-foreground mt-2">Entertainment while exercising</h4>
+                  <p className="text-muted-foreground text-sm">Watch youtube videos while exercising.</p>
                 </CardContent>
               </Card>
             </motion.div>
